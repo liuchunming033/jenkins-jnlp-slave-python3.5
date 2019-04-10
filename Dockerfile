@@ -1,6 +1,6 @@
 FROM jenkins/jnlp-slave
 
-LABEL maintainer="sqe"
+LABEL maintainer="liuchunming033@163.com"
 
 USER root
 
