@@ -22,6 +22,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && ln -nsf /usr/bin/python${PYTHON_VERSION} /usr/bin/python
 
-RUN pip3 install pipenv
-
-USER jenkins
+ADD requirements.txt  /home/jenkins
+RUN pip3 install -r /home/jenkins/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn
+#USER jenkins
